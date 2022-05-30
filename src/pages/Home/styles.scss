@@ -22,13 +22,19 @@
             align-items: center;
             gap: 1rem;
 
+            background: #e6e6e6;
+
+            padding: 1rem;
+            
+            border-radius: 5px;
+
             img {
                 width: 3.5rem;
                 height: 3.5rem;
 
                 box-shadow: 0 0 0 3px #64da0b;
 
-                border: transparent solid 1px;
+                border: transparent solid 3px;
                 border-radius: 50%;
             }
         }
@@ -37,6 +43,8 @@
 
     input, button {
         font-size: 1rem;
+        font-weight: 700;
+
 
         width: 50%;
 
@@ -48,19 +56,22 @@
 
     input {
         background: #e6e6e6;
+        color: #333333;
 
         outline: 2px solid transparent;
 
-        transition: outline 0.2s;
+        transition: all 0.2s;
 
         &:focus {
-            outline: 2px solid #e0e0e0;
+            outline: 2px solid #333333;
+
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+
+            background: #ffffff;
         }
     }
 
     button {
-        font-weight: 700;
-
         background: #ea4c89;
         color: #fff;
 
@@ -72,6 +83,7 @@
 
         &:hover {
             filter: brightness(0.9);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
         }
     }
 }
