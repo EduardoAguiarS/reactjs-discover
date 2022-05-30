@@ -19,6 +19,7 @@ export const Home = () => {
         };
 
         setStudents([...students, newStudent]);
+        setName("");
     }
 
     return (
@@ -33,6 +34,8 @@ export const Home = () => {
                 type="text"
                 placeholder={"Digite seu nome"}
                 onChange={e => setName(e.target.value)}
+                onKeyPress={e => e.key === "Enter" ? handlePerson() : null}
+                value={name}
             />
             <button
                 type={"button"}
