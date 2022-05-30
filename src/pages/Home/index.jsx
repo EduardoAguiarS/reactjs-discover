@@ -27,6 +27,10 @@ export const Home = () => {
             {/* Header */}
             <header>
                 <h1>Lista de Presença</h1>
+                <div className={"header-content"}>
+                    <strong>Eduardo</strong>
+                    <img src="https://github.com/eduardoaguiars.png" alt="Foto de Perfil"/>
+                </div>
             </header>
 
             {/* Form */}
