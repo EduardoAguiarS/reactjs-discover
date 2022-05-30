@@ -6,6 +6,7 @@ export const Home = () => {
     // State
     const [name, setName] = useState("");
     const [students, setStudents] = useState([]);
+    const [user, setUser] = useState({name: "", avatar: ""});
 
     // Add new student in the list
     const handlePerson = () => {
@@ -26,7 +27,14 @@ export const Home = () => {
 
     // Effect
     useEffect(() => {
-        
+        fetch("https://randomuser.me/api/")
+            .then(response => response.json())
+            .then(data => {
+                setUser({
+                    name: data.results[0].name.first,
+                    avatar: data.results[0].picture.large
+                });
+            });
     }, [])
 
     return (
@@ -36,9 +44,9 @@ export const Home = () => {
                 <h1>Lista de Presença</h1>
 
                 <div className={"header-content"}>
-                    <strong>Eduardo</strong>
+                    <strong>{user.name}</strong>
                     <img
-                        src="https://github.com/eduardoaguiars.png"
+                        src={user.avatar}
                         alt="Foto de Perfil"
                     />
                 </div>
