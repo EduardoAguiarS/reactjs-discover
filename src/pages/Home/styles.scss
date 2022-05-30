@@ -1,0 +1,51 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 5.25rem 0 1.5rem;
+  }
+
+  h1, button {
+    text-transform: uppercase;
+  }
+
+  input, button {
+    width: 50%;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  input {
+    background: #e6e6e6;
+
+    font-size: 16px;
+
+    outline: 2px solid transparent;
+
+    transition: outline 0.2s;
+
+    &:focus {
+      outline: 2px solid #e0e0e0;
+    }
+  }
+
+  button {
+    font-weight: 700;
+
+    background: #ea4c89;
+    color: #fff;
+
+    margin: 0.85rem 0 5.25rem;
+
+    cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
