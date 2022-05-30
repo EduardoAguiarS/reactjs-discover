@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import {Card} from "../../components/Card";
 import "./styles.scss";
 
@@ -23,6 +23,11 @@ export const Home = () => {
         setStudents([...students, newStudent]);
         setName("");
     }
+
+    // Effect
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <div className={"home-container"}>

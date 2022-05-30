@@ -23,9 +23,12 @@
             gap: 1rem;
 
             img {
-                width: 3rem;
-                height: 3rem;
-                
+                width: 3.5rem;
+                height: 3.5rem;
+
+                box-shadow: 0 0 0 3px #64da0b;
+
+                border: transparent solid 1px;
                 border-radius: 50%;
             }
         }
