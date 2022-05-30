@@ -23,19 +23,23 @@ export const Home = () => {
 
         setStudents([...students, newStudent]);
         setName("");
-    }
+    };
 
     // Effect
     useEffect(() => {
-        fetch("https://randomuser.me/api/")
-            .then(response => response.json())
-            .then(data => {
-                setUser({
-                    name: data.results[0].name.first,
-                    avatar: data.results[0].picture.large
-                });
+        // Get user data, fetch from API
+        const fetchUser = async () => {
+            const response = await fetch("https://randomuser.me/api/");
+            const data = await response.json();
+            const user = data.results[0];
+            setUser({
+                name: user.name.first,
+                avatar: user.picture.large
             });
-    }, [])
+        };
+
+        fetchUser();
+    }, []);
 
     return (
         <div className={"home-container"}>
